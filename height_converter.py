@@ -8,9 +8,16 @@ window.resizable(height=False, width=False)
 
 
 def convert():
-    value = float(ft_entry.get())
-    meter = value*0.3048
-    mt_value.set("%.4f" % meter)
+    if mt_entry.get() == "":
+        value1 = float(ft_entry.get())
+        meter = value1*0.3048
+        mt_value.set("%.4f" % meter)
+    else :
+        #pass
+    #if ft_entry == None:
+        value2 = float(mt_entry.get())
+        feet = value2/0.3048
+        ft_value.set("%.4f" % feet)
 
 
 def clear():
